@@ -1,0 +1,37 @@
+{
+  "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"Arrow function": {
+		"prefix": "ff",
+		"body": [
+			"const ${1:name} = ($2) => {",
+			"\t$3",
+			"}",
+      "$0"
+		]
+	},
+  "Export function": {
+		"prefix": "exf",
+		"body": [
+			"export const ${1:name} = (${3}) => {",
+			"\t$2",
+			"}",
+      "$0"
+		]
+	},
+  "Anonymous Function": {
+    "prefix": ">",
+		"body": [
+			"($2) => {",
+			"\t$1",
+			"}",
+      "$0"
+		]
+  },
+}

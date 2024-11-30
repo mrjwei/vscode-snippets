@@ -1,0 +1,138 @@
+{
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Print output to console"
+	},
+	"Arrow function": {
+		"prefix": "ff",
+		"body": [
+			"const ${1:name} = ($2) => {",
+			"\t$3",
+			"}",
+      "$0"
+		]
+	},
+  "Export function": {
+		"prefix": "exf",
+		"body": [
+			"export const ${1:name} = (${3}) => {",
+			"\t$2",
+			"}",
+      "$0"
+		]
+	},
+  "Anonymous Function": {
+    "prefix": ">",
+		"body": [
+			"($2) => {",
+			"\t$1",
+			"}",
+      "$0"
+		]
+  },
+  "Create component": {
+    "prefix": "comp",
+		"body": [
+			"import React from 'react'",
+      "",
+			"export function ${1:name}({$2}: $3) {",
+      "\treturn (",
+      "\t\t$4",
+      "\t)",
+			"}",
+      "$0"
+		]
+  },
+  "Create default component": {
+    "prefix": "dcomp",
+		"body": [
+			"import React from 'react'",
+      "",
+			"export default function ${1:name}({$2}: $3) {",
+      "\treturn (",
+      "\t\t$4",
+      "\t)",
+			"}",
+      "$0"
+		]
+  },
+  "useState": {
+		"prefix": "us",
+		"body": "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = React.useState($0)"
+	},
+  "Export type": {
+		"prefix": "ext",
+		"body": "export type T${1:name} = $2"
+	},
+  "Export interface": {
+		"prefix": "exi",
+		"body": [
+      "export interface I${1:name} {",
+      "\t$2",
+      "}",
+      "$0"
+    ]
+	},
+	"Self-closing Tag": {
+    "prefix": "/",
+		"body": "<$0/>"
+  },
+  "Space to Dash Example": {
+  "prefix": "dash",
+  "body": ["${1:text here} -> ${1/ /-/g}"],
+  "description": "Replace spaces with dashes"
+},
+"Add Prefix Example": {
+  "prefix": "prefix",
+  "body": ["prefix_${1:text}"],
+  "description": "Add prefix to text"
+},
+"Replace Vowels Example": {
+  "prefix": "vowels",
+  "body": ["${1:text} -> ${1/[aeiou]/*/g}"],
+  "description": "Replace vowels with asterisks"
+},
+"Nested Placeholder": {
+    "prefix": "nested",
+    "body": ["console.log(${1:variable}, '${1}');"]
+  },
+  "Method Choices": {
+    "prefix": "method",
+    "body": [
+      "app.${1|get,post,put,delete|}('${2:path}', (req, res) => {",
+      "  res.send('${3:response}');",
+      "});"
+    ]
+  },
+  "File Header": {
+    "prefix": "header",
+    "body": [
+      "/**",
+      " * File: ${TM_FILENAME}",
+      " * Author: Jesse",
+      " * Created: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      " */",
+      "$0"
+    ]
+  },
+  "Arrow Function": {
+    "prefix": "fn",
+    "body": ["const ${1:name} = (${2:args}) => { $0 };"]
+  },
+  "Traditional Function": {
+    "prefix": "fn",
+    "body": ["function ${1:name}(${2:args}) { $0 }"]
+  },
+  "React Component": {
+    "prefix": "rc",
+    "body": [
+      "${TM_SELECTED_TEXT}",
+      "comp",
+      "const ${1:ComponentName} = () => <div>$0</div>;"
+    ]
+  }
+}

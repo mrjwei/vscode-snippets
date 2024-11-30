@@ -1,0 +1,159 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the
+	// same ids are connected.
+	// Example:
+	"useState": {
+		"prefix": "us",
+		"body": "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = useState($0)",
+		"description": "my useState"
+	},
+	"useEffect": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {",
+			"\t$1",
+			"}, [$2])",
+			"\n"
+		],
+		"description": "my useEffect"
+	},
+	"Fetch": {
+		"prefix": "fet",
+		"body": [
+			"fetch($1)",
+			"\t.then(res => res.json())",
+			"\t.then(${2:data} => $3)$0",
+			"\t.catch(err => console.log(err))"
+		],
+		"description": "my useEffect"
+	},
+	"Fetch long": {
+		"prefix": "fetlong",
+		"body": [
+			"const res = await fetch($1)",
+			"const ${2:data} = await res.json()",
+			"try {",
+			"\t$3",
+			"} catch(err) {",
+			"\tconsole.log(err)",
+			"}$0"
+		],
+		"description": "my useEffect"
+	},
+	"Print to console": {
+		"prefix": "log",
+		"body": "console.log($1)",
+		"description": "Log output to console"
+	},
+	"querySelector": {
+		"prefix": "q",
+		"body": "document.querySelector('$el')",
+		"description": "querySelector"
+	},
+	"querySelectorAll": {
+		"prefix": "qa",
+		"body": "document.querySelectorAll('$el')",
+		"description": "querySelectorAll"
+	},
+	"Assign querySelector": {
+		"prefix": "aq",
+		"body": "const $el = document.querySelector('$el')",
+		"description": "assign element obtained by querySelector to constant"
+	},
+	"Assign querySelectorAll": {
+		"prefix": "aqa",
+		"body": "const $els = document.querySelectorAll('$els')",
+		"description": "assign elements obtained by querySelectorAll to constant"
+	},
+	"preventDefault": {
+		"prefix": "prevent",
+		"body": "e.preventDefault();",
+		"description": "preventDefault"
+	},
+	"stopPropagation": {
+		"prefix": "stop",
+		"body": "e.stopPropagation();",
+		"description": "stopPropagation"
+	},
+	"jQuery DOM ready": {
+		"prefix": "$()",
+		"body": "$(function() {$1});",
+		"description": "jQuery DOM ready boilerplate"
+	},
+	"Axios get": {
+		"prefix": "ag",
+		"body": [
+			"axios.get('$1')",
+			"  .then(res => {$2})",
+			"  .catch($3)"
+		],
+		"description": "Axios get"
+	},
+	"Axios post": {
+		"prefix": "ap",
+		"body": [
+			"axios.post('$1', $2)",
+			"  .then(res => {$3})",
+			"  .catch($4)"
+		],
+		"description": "Axios post"
+	},
+	"Function defining": {
+		"prefix": "ff\t",
+		"body": [
+			"const ${1:name} = (${3:args}) => {",
+			"\t$2$0",
+			"}"
+		],
+		"description": "Function defining"
+	},
+  "Async Function defining": {
+		"prefix": "aff\t",
+		"body": "const ${1:name} = async (${3:args}) => {}",
+		"description": "Async Function defining"
+	},
+  "Anonymous Arrow Function": {
+		"prefix": "arrow\t",
+		"body": "($2) => {$1$0}",
+		"description": "Anonymous Arrow Function"
+	},
+	"Event value": {
+		"prefix": "etv",
+		"body": "e.target.value",
+		"description": "Event value"
+	},
+	"Backticks": {
+		"prefix": "`",
+		"body": [
+			"`",
+			"\t$1",
+			"`;"
+		],
+		"description": "Backticks"
+	},
+	"Start tag only": {
+		"prefix": "/",
+		"body": "<$1 />",
+		"description": "Start tag only"
+	},
+  "Export function": {
+    "prefix": "exf",
+    "body": [
+      "export const ${1:function} = (${3:args}) => {",
+      "\t$2",
+      "}"
+    ],
+    "description": "Export function"
+  },
+  "Export module": {
+    "prefix": "me",
+    "body": [
+      "module.exports = {",
+      "\t$1",
+      "}"
+    ],
+    "description": "Export module"
+  },
+}
