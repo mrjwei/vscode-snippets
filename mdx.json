@@ -2,5 +2,5 @@
 	"Self-closing Tag": {
     "prefix": "/",
 		"body": "<$0/>"
-  },
+  }
 }

@@ -1,21 +1,18 @@
 {
   "Print to console": {
-		"prefix": "log",
-		"body": [
-			"console.log('$1');",
-			"$2"
-		],
-		"description": "Log output to console"
-	},
-	"Arrow function": {
-		"prefix": "ff",
-		"body": [
-			"const ${1:name} = ($2) => {",
-			"\t$3",
-			"}",
-      "$0"
-		]
-	},
+    "prefix": "log",
+    "body": [
+      "console.log('$1');",
+      "$2"
+    ],
+    "description": "Print output to console"
+  },
+	"Arrow Function": {
+    "prefix": "fn",
+    "body": [
+      "const ${1:name} = (${2:args}) => { $0 };"
+    ]
+  },
   "Export function": {
 		"prefix": "exf",
 		"body": [
@@ -34,4 +31,15 @@
       "$0"
 		]
   },
+  "Test Boilerplate": {
+    "prefix": "dit",
+    "body": [
+      "describe('${1:TestSuiteName}', () => {",
+      "\t$3",
+      "\tit('${2:TestCaseName}', () => {",
+      "\t\t$0",
+      "\t})",
+      "})"
+    ]
+  }
 }
