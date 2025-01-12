@@ -107,13 +107,17 @@
   "Arrow Function": {
     "prefix": "fn",
     "body": [
-      "const ${1:name} = (${2:args}) => { $0 };"
+      "const ${1:name} = (${2:args}) => {",
+      "\t$0",
+      "}"
     ]
   },
   "Traditional Function": {
     "prefix": "fn",
     "body": [
-      "function ${1:name}(${2:args}) { $0 }"
+      "function ${1:name}(${2:args}) {",
+      "\t$0",
+      "}"
     ]
   },
   "Test Boilerplate": {
@@ -124,6 +128,16 @@
       "\tit('${2:TestCaseName}', () => {",
       "\t\t$0",
       "\t})",
+      "})"
+    ]
+  },
+  "Parameterized Tests": {
+    "prefix": "each",
+    "body": [
+      "it.each([",
+      "\t$1",
+      "])('$2', ($3) => {",
+      "\t$0",
       "})"
     ]
   }
