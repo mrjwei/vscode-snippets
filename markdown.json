@@ -1,8 +1,4 @@
 {
-	"Self-closing Tag": {
-    "prefix": "/",
-		"body": "<$0/>"
-  },
   "Python code block": {
     "prefix": "cp",
 		"body": [
