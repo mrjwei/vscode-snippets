@@ -49,11 +49,10 @@
   "useEffect": {
 		"prefix": "ue",
 		"body": [
-			"useEffect(() => {",
-			"\t$0",
-			"}, [$1])"
-		],
-		"description": "my useEffect"
+			"React.useEffect(() => {",
+			"\t$1",
+			"}, [$0])"
+		]
 	},
   "Export type": {
     "prefix": "ext",
